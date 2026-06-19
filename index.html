@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eylül ve Ömer ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f0f0f,#1c1c1c);
+    color:white;
+    overflow-x:hidden;
+}
+
+#giris{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    backdrop-filter: blur(10px);
+}
+
+#giris h1{
+    font-size:28px;
+    margin-bottom:30px;
+    text-align:center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+input{
+    width:280px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    font-size:16px;
+    outline:none;
+    background:#fff;
+    transition: 0.3s;
+}
+
+input:focus{
+    box-shadow: 0 0 20px rgba(255,77,109,.5);
+}
+
+button{
+    margin-top:20px;
+    padding:15px 40px;
+    border:none;
+    border-radius:15px;
+    background:#ff4d6d;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover{
+    background:#ff1744;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,77,109,.8);
+}
+
+#site{
+    display:none;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    background: linear-gradient(135deg,#1a1a1a,#2d2d2d);
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:30px;
+    text-shadow: 0 0 20px rgba(255,77,109,.5);
+}
+
+.hero p{
+    max-width:700px;
+    line-height:35px;
+    font-size:20px;
+    color:#e0e0e0;
+}
+
+.galeri-container{
+    background: linear-gradient(135deg,#0f0f0f,#1c1c1c);
+    padding:60px 20px;
+}
+
+.galeri-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    text-shadow: 0 0 20px rgba(255,77,109,.5);
+}
+
+.galeri{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.galeri-item{
+    position: relative;
+    overflow: hidden;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,77,109,.5);
+    transition:.5s;
+    cursor: pointer;
+}
+
+.galeri-item img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.galeri-item:hover img{
+    transform:scale(1.1);
+}
+
+.galeri-item:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px rgba(255,77,109,.8);
+}
+
+.sayac{
+    text-align:center;
+    padding:60px 40px;
+    background: linear-gradient(135deg,#1a1a1a,#2d2d2d);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.sayac h2{
+    font-size:40px;
+    margin-bottom:20px;
+    text-shadow: 0 0 20px rgba(255,77,109,.5);
+}
+
+#gun{
+    font-size:60px;
+    color:#ff9eb1;
+    margin-top:20px;
+    font-weight: bold;
+}
+
+.mesaj{
+    text-align:center;
+    padding:60px 40px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f0f0f,#1c1c1c);
+}
+
+.mesaj h2{
+    font-size:40px;
+    margin-bottom:30px;
+    text-shadow: 0 0 20px rgba(255,77,109,.5);
+}
+
+#ozelMesaj{
+    margin-top:40px;
+    font-size:28px;
+    color:#ff9eb1;
+    min-height:60px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.kalp{
+    position:fixed;
+    top:-20px;
+    color:red;
+    animation:dus 5s linear infinite;
+    pointer-events:none;
+    z-index: 9999;
+}
+
+@keyframes dus{
+    100%{
+        transform:translateY(110vh);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    
+    .galeri {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .galeri-item img {
+        height: 200px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="giris">
+    <h1>Bu küçük sürprizi açmak için parolayı gir ❤️</h1>
+
+    <input type="password" id="sifre" placeholder="Parola" onkeypress="if(event.key==='Enter') kontrol()">
+
+    <button onclick="kontrol()">Giriş Yap</button>
+</div>
+
+<div id="site">
+
+<section class="hero">
+<h1>Eylül ve Ömer ❤️</h1>
+
+<p>
+Belki her şeyi mükemmel yapamıyorum ama seni sevmekten hiç vazgeçmedim.
+Birlikte geçirdiğimiz anılar benim için çok değerli.
+Bu küçük siteyi sadece sana olan sevgimi göstermek için hazırladım.
+İyi ki hayatıma girdin. ❤️
+</p>
+</section>
+
+<div class="galeri-container">
+<h2 class="galeri-title">Anılarımız ❤️</h2>
+<div class="galeri">
+<div class="galeri-item"><img src="https://images2.imgbox.com/e7/a1/twc5TPDW_t.jpg" alt="Foto 1"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/b8/90/Lh1fKCCZ_t.jpg" alt="Foto 2"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/e8/2e/jPrz2ypX_t.jpg" alt="Foto 3"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/6c/3d/HyvXNtS_t.jpg" alt="Foto 4"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/8d/36/zWdLQYJ8_t.jpg" alt="Foto 5"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/31/db/BVnnj4TX_t.jpg" alt="Foto 6"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/c0/18/s92Gg2CY_t.jpg" alt="Foto 7"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/4e/6e/v6YgxvkS_t.jpg" alt="Foto 8"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/4e/0b/xqSY6dwf_t.jpg" alt="Foto 9"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/a2/6f/MyP5ShCQ_t.jpg" alt="Foto 10"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/76/8c/Ps3G7kbr_t.jpg" alt="Foto 11"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/00/a8/G43zKRXb_t.jpg" alt="Foto 12"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/95/12/ccz4YfsJ_t.jpg" alt="Foto 13"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/e5/74/gMJ5p3fK_t.jpg" alt="Foto 14"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/6f/ae/J9SQ6dz_t.jpg" alt="Foto 15"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/c4/8c/jZQ0Dyp6_t.jpg" alt="Foto 16"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/0e/e6/CZsrd7b_t.jpg" alt="Foto 17"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/be/97/whSWGHL2_t.jpg" alt="Foto 18"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/1c/ee/sd2bzWZp_t.jpg" alt="Foto 19"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/d0/61/k2rn3CjT_t.jpg" alt="Foto 20"></div>
+<div class="galeri-item"><img src="https://images2.imgbox.com/e8/17/vx47shnX_t.jpg" alt="Foto 21"></div>
+</div>
+</div>
+
+<section class="sayac">
+<h2>Birlikte Geçen Süre ❤️</h2>
+<div id="gun"></div>
+</section>
+
+<section class="mesaj">
+<h2>Bana Tıkla ❤️</h2>
+<button onclick="mesaj()">Özel Mesaj Aç</button>
+
+<div id="ozelMesaj"></div>
+</section>
+
+</div>
+
+<script>
+
+function kontrol(){
+    const sifre = document.getElementById("sifre").value;
+    if(sifre=="01.09.2025"){
+        document.getElementById("giris").style.display="none";
+        document.getElementById("site").style.display="block";
+        baslatSayfayi();
+    }else{
+        alert("Parola yanlış ❤️");
+        document.getElementById("sifre").value="";
+    }
+}
+
+function baslatSayfayi(){
+    hesaplaSure();
+    kalplariBaslat();
+}
+
+function hesaplaSure(){
+    let baslangic = new Date("2025-09-01");
+    let bugun = new Date();
+    
+    let fark = bugun - baslangic;
+    let gun = Math.floor(fark/(1000*60*60*24));
+    
+    if(gun < 0) {
+        document.getElementById("gun").innerHTML = "Çok yakında başlayacak... ❤️";
+    } else {
+        document.getElementById("gun").innerHTML = gun + " gündür kalbimdesin.";
+    }
+}
+
+function mesaj(){
+    let sozler = [
+        "Seni her gün biraz daha çok seviyorum. ❤️",
+        "Gülüşün en sevdiğim manzara. ❤️",
+        "İyi ki varsın. ❤️",
+        "Bir ömür yanımda olmanı istiyorum. ❤️",
+        "Seninle vakit geçirmek hayatımın en güzel anları. ❤️",
+        "Sen benim en güzel tesadüfüsün. ❤️",
+        "Seni özledim. ❤️",
+        "Seninle her an güzel. ❤️",
+        "Hayatım seninle renkli. ❤️",
+        "Seni seviyorum çok çok... ❤️"
+    ];
+    
+    document.getElementById("ozelMesaj").innerHTML =
+    sozler[Math.floor(Math.random()*sozler.length)];
+}
+
+function kalplariBaslat(){
+    setInterval(()=>{
+        let kalp=document.createElement("div");
+        kalp.className="kalp";
+        kalp.innerHTML="❤️";
+        kalp.style.left=Math.random()*100+"vw";
+        kalp.style.fontSize=(Math.random()*20+20)+"px";
+        
+        document.body.appendChild(kalp);
+        
+        setTimeout(()=>{
+            kalp.remove();
+        },5000);
+    },300);
+}
+
+</script>
+
+</body>
+</html>
