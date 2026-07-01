@@ -3,108 +3,420 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eylül ve Ömer ❤️</title>
+<title>Eylül ❤️</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#0f0f0f,#1c1c1c);color:white;overflow-x:hidden}
-#giris{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;backdrop-filter:blur(10px);background:linear-gradient(135deg,rgba(15,15,15,0.8),rgba(28,28,28,0.8)),url('https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_3747.jpeg');background-size:cover;background-position:center;background-attachment:fixed;position:relative}
-#giris::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:0}
-#giris>*{position:relative;z-index:1}
-#giris h1{font-size:28px;margin-bottom:30px;text-align:center;animation:pulse 2s infinite;text-shadow:0 0 10px rgba(0,0,0,0.8)}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.7}}
-input{width:280px;padding:15px;border:none;border-radius:15px;font-size:16px;outline:none;background:#fff;transition:.3s}
-input:focus{box-shadow:0 0 20px rgba(255,77,109,.5)}
-button{margin-top:20px;padding:15px 40px;border:none;border-radius:15px;background:#ff4d6d;color:white;font-size:17px;cursor:pointer;transition:.3s;font-weight:bold}
-button:hover{background:#ff1744;transform:scale(1.05);box-shadow:0 0 20px rgba(255,77,109,.8)}
-#site{display:none}
-.hero{height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;padding:20px;background:linear-gradient(135deg,rgba(26,26,26,0.5),rgba(45,45,45,0.5)),url('https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_3747.jpeg');background-size:cover;background-position:center;background-attachment:fixed}
-.hero h1{font-size:60px;margin-bottom:30px;text-shadow:0 0 20px rgba(0,0,0,0.9),0 0 10px rgba(255,77,109,.8);color:#fff}
-.hero p{max-width:700px;line-height:35px;font-size:20px;color:#fff;text-shadow:0 0 15px rgba(0,0,0,0.9);background:rgba(0,0,0,0.3);padding:20px;border-radius:10px}
-.galeri-container{background:linear-gradient(135deg,#0f0f0f,#1c1c1c);padding:60px 20px}
-.galeri-title{text-align:center;font-size:40px;margin-bottom:50px;text-shadow:0 0 20px rgba(255,77,109,.5)}
-.galeri{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1200px;margin:0 auto;padding:0 20px}
-.galeri-item{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 0 25px rgba(255,77,109,.5);transition:.5s;cursor:pointer}
-.galeri-item img{width:100%;height:300px;object-fit:cover;transition:.5s}
-.galeri-item:hover img{transform:scale(1.1)}
-.galeri-item:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(255,77,109,.8)}
-.sayac{text-align:center;padding:60px 40px;background:linear-gradient(135deg,#1a1a1a,#2d2d2d);min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
-.sayac h2{font-size:40px;margin-bottom:20px;text-shadow:0 0 20px rgba(255,77,109,.5)}
-#gun{font-size:60px;color:#ff9eb1;margin-top:20px;font-weight:bold}
-.mesaj{text-align:center;padding:60px 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(135deg,#0f0f0f,#1c1c1c)}
-.mesaj h2{font-size:40px;margin-bottom:30px;text-shadow:0 0 20px rgba(255,77,109,.5)}
-#ozelMesaj{margin-top:40px;font-size:28px;color:#ff9eb1;min-height:60px;animation:fadeIn .5s ease-in}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.kalp{position:fixed;top:-20px;color:red;animation:dus 5s linear infinite;pointer-events:none;z-index:9999}
-@keyframes dus{100%{transform:translateY(110vh)}}
-@media (max-width:768px){.hero h1{font-size:35px}.hero p{font-size:16px;line-height:25px}.galeri{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}.galeri-item img{height:200px}}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(180deg,#090909,#1d0017,#000);
+color:white;
+overflow-x:hidden;
+}
+
+#login{
+position:fixed;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+z-index:9999;
+}
+
+.login-box{
+width:330px;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+text-align:center;
+box-shadow:0 0 40px rgba(255,0,120,.35);
+}
+
+.login-box h1{
+margin-bottom:20px;
+font-size:28px;
+}
+
+input{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:12px;
+outline:none;
+font-size:16px;
+}
+
+button{
+margin-top:15px;
+padding:14px;
+width:100%;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:#ff2d75;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#ff4d8d;
+}
+
+#error{
+margin-top:15px;
+color:#ff6b6b;
+font-weight:bold;
+}
+
+#site{
+display:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:20px;
+animation:fade 2s;
+}
+
+.hero p{
+font-size:22px;
+line-height:40px;
+max-width:900px;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.gallery{
+padding:70px 20px;
+}
+
+.gallery h2{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+}
+
+.photos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.photos img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 0 20px rgba(255,255,255,.15);
+cursor:pointer;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+
+.counter{
+padding:80px 20px;
+text-align:center;
+}
+
+.counter h2{
+font-size:36px;
+margin-bottom:25px;
+}
+
+#time{
+font-size:32px;
+font-weight:bold;
+color:#ff9bc4;
+margin-bottom:35px;
+}
+
+#loveBtn{
+width:240px;
+font-size:20px;
+}
+
+#quote{
+margin-top:35px;
+font-size:24px;
+color:#ffd6e8;
+min-height:80px;
+padding:0 20px;
+}
+
+footer{
+padding:50px;
+text-align:center;
+font-size:24px;
+color:#ffc5da;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:#ff4f90;
+animation:fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
 </style>
 </head>
+
 <body>
 
-<div id="giris">
-    <h1>Bu küçük sürprizi açmak için parolayı gir ❤️</h1>
-    <input type="password" id="sifre" placeholder="Parola" onkeypress="if(event.key==='Enter') kontrol()">
-    <button onclick="kontrol()">Giriş Yap</button>
+<div id="login">
+<div class="login-box">
+
+<h1>❤️ Hoş Geldin ❤️</h1>
+
+<input type="password" id="password" placeholder="Parolayı Gir" onkeypress="if(event.key==='Enter') login()">
+
+<button onclick="login()">
+Giriş Yap
+</button>
+
+<div id="error"></div>
+
+</div>
 </div>
 
 <div id="site">
 
 <section class="hero">
-<h1>Eylül ve Ömer ❤️</h1>
+
+<div>
+
+<h1>Eylül ❤️</h1>
+
 <p>
-Belki her şeyi mükemmel yapamıyorum ama seni sevmekten hiç vazgeçmedim.
-Birlikte geçirdiğimiz anılar benim için çok değerli.
-Bu küçük siteyi sadece sana olan sevgimi göstermek için hazırladım.
-İyi ki hayatıma girdin. ❤️
+
+Bazı insanlar vardır...
+Hayatından çıkıp gitseler bile,
+kalbinden hiç çıkmazlar.
+
+Sen benim en güzel tesadüfüm,
+en güzel duam,
+en güzel yarım kalan hikâyemsin.
+
+Aradan ne kadar zaman geçerse geçsin,
+ismi aklıma düştüğünde
+kalbim ilk günkü gibi atıyor.
+
+Belki yollarımız ayrıldı...
+Belki artık eskisi gibi değiliz...
+
+Ama bilmeni isterim ki;
+
+<b>Seni hiçbir zaman unutamadım Eylül.</b>
+
 </p>
-</section>
 
-<div class="galeri-container">
-<h2 class="galeri-title">Anılarımız ❤️</h2>
-<div class="galeri">
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/0a7a9795-ae3b-4871-b9b6-a7c568166159.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/0a7a9795-ae3b-4871-b9b6-a7c568166159.jpeg" alt="Foto 1"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/0d2dc7a4-aebd-4591-9063-d81e28750abe.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/0d2dc7a4-aebd-4591-9063-d81e28750abe.jpeg" alt="Foto 2"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000071545.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000071545.jpeg" alt="Foto 3"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000079046.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000079046.jpeg" alt="Foto 4"></a></div>
-<div class="galeri-item"><a href="https://images2.imgbox.com/e7/a1/twc5TPDW_t.jpg" target="_blank" rel="noopener"><img src="https://images2.imgbox.com/e7/a1/twc5TPDW_t.jpg" alt="Dış Foto"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000080105.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/1000080105.png" alt="Foto 5"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/173983cb-0a83-4847-9c61-3d2aa156c277.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/173983cb-0a83-4847-9c61-3d2aa156c277.jpeg" alt="Foto 6"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/19365ac6-b562-4a0e-9f6d-970756eddc5f.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/19365ac6-b562-4a0e-9f6d-970756eddc5f.jpeg" alt="Foto 7"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/243ad435-31a9-412c-b4a7-4ebdcd4999a9.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/243ad435-31a9-412c-b4a7-4ebdcd4999a9.jpeg" alt="Foto 8"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/2499dc58-dbff-435e-b592-b58a9ccd1985.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/2499dc58-dbff-435e-b592-b58a9ccd1985.jpeg" alt="Foto 9"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/2a40d8d9-cdea-4f05-a23e-b8e88254d277.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/2a40d8d9-cdea-4f05-a23e-b8e88254d277.jpeg" alt="Foto 10"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/3f6e0747-aad6-4e75-a1df-9ea680564959.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/3f6e0747-aad6-4e75-a1df-9ea680564959.jpeg" alt="Foto 11"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/60d6d795-bee6-4760-ac4b-bc865acbbf32.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/60d6d795-bee6-4760-ac4b-bc865acbbf32.jpeg" alt="Foto 12"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/62c29e97-2b16-4ff8-8ea9-5875cb198527.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/62c29e97-2b16-4ff8-8ea9-5875cb198527.jpeg" alt="Foto 13"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/6a184127-6c9e-449e-9800-4e36f8603afb.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/6a184127-6c9e-449e-9800-4e36f8603afb.jpeg" alt="Foto 14"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/7d01ecf3-1ff9-4e60-80a0-603054da7077.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/7d01ecf3-1ff9-4e60-80a0-603054da7077.jpeg" alt="Foto 15"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_0918.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_0918.png" alt="Foto 16"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_3747.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/IMG_3747.jpeg" alt="Foto 17"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/aa0f001e-39b2-45b1-8124-550ecef51032.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/aa0f001e-39b2-45b1-8124-550ecef51032.jpeg" alt="Foto 18"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/c4e6e4a2-a328-4370-8c16-65dd3b236e52.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/c4e6e4a2-a328-4370-8c16-65dd3b236e52.jpeg" alt="Foto 19"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/d84bf10f-2a58-45b0-93fe-51771b9773c6.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/d84bf10f-2a58-45b0-93fe-51771b9773c6.jpeg" alt="Foto 20"></a></div>
-<div class="galeri-item"><a href="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/ffdb1b31-8306-47ea-a04f-ad55ce671a8d.jpeg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/ffdb1b31-8306-47ea-a04f-ad55ce671a8d.jpeg" alt="Foto 21"></a></div>
-</div>
 </div>
 
-<section class="sayac">
-<h2>Birlikte Geçen Süre ❤️</h2>
-<div id="gun"></div>
 </section>
 
-<section class="mesaj">
-<h2>Bana Tıkla ❤️</h2>
-<button onclick="mesaj()">Özel Mesaj Aç</button>
-<div id="ozelMesaj"></div>
+<section class="gallery">
+
+<h2>Bizden Kalanlar ❤️</h2>
+
+<div class="photos">
+
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto1.jpg" alt="Anı 1">
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto2.jpg" alt="Anı 2">
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto3.jpg" alt="Anı 3">
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto4.jpg" alt="Anı 4">
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto5.jpg" alt="Anı 5">
+<img src="https://raw.githubusercontent.com/kozmoz0/EylulveOmer/main/foto6.jpg" alt="Anı 6">
+
+</div>
+
 </section>
+
+<section class="counter">
+
+<h2>
+
+Ne olursa olsun...
+
+Kalbimde kaldığın süre ❤️
+
+</h2>
+
+<div id="time"></div>
+
+<button id="loveBtn">
+
+Tıkla İki Gözüm ❤️
+
+</button>
+
+<div id="quote"></div>
+
+</section>
+
+<footer>
+
+"Bazı insanlar unutulmaz,
+çünkü kalbin en güzel yerine dokunurlar."
+
+</footer>
 
 </div>
 
 <script>
-function kontrol(){const sifre=document.getElementById("sifre").value;if(sifre=="01.09.2025"){document.getElementById("giris").style.display="none";document.getElementById("site").style.display="block";baslatSayfayi();}else{alert("Parola yanlış ❤️");document.getElementById("sifre").value="";}}
-function baslatSayfayi(){hesaplaSure();kalplariBaslat();}
-function hesaplaSure(){let baslangic=new Date("2025-09-01");let bugun=new Date();let fark=bugun-baslangic;let gun=Math.floor(fark/(1000*60*60*24));if(gun<0){document.getE[...]
+
+const PASSWORD="01092025";
+
+function login(){
+
+let pass=document.getElementById("password").value;
+
+if(pass===PASSWORD){
+
+document.getElementById("login").style.display="none";
+document.getElementById("site").style.display="block";
+
+}else{
+
+document.getElementById("error").innerHTML="Kalbim kırıldı ❤️";
+document.getElementById("password").value="";
+
+}
+
+}
+
+const start=new Date("2025-09-01T00:00:00");
+
+function timer(){
+
+const now=new Date();
+
+let diff=now-start;
+
+let days=Math.floor(diff/1000/60/60/24);
+
+let hours=Math.floor(diff/1000/60/60)%24;
+
+let minutes=Math.floor(diff/1000/60)%60;
+
+let seconds=Math.floor(diff/1000)%60;
+
+document.getElementById("time").innerHTML=
+
+days+" Gün "+
+hours+" Saat "+
+minutes+" Dakika "+
+seconds+" Saniye";
+
+}
+
+setInterval(timer,1000);
+
+timer();
+
+const quotes=[
+
+"Her şey sende güzeldi. ❤️",
+
+"Gözlerin hâlâ aklımda.",
+
+"Bir gülüşün dünyama bedeldi.",
+
+"İnsan en çok unutamadığını özlermiş.",
+
+"Kalbimin en güzel yerindesin.",
+
+"Sana kızamadım hiç.",
+
+"Sen benim en güzel hikâyemdin.",
+
+"Her şarkıda biraz sen varsın.",
+
+"Geceleri aklıma ilk sen geliyorsun.",
+
+"İyi ki seni tanımışım.",
+
+"Belki döneriz bir gün.",
+
+"Dualarımın en güzel yerindesin.",
+
+"Kalbim hâlâ seni seçiyor.",
+
+"Sen mutlu ol yeter.",
+
+"Bir ömür yetmedi sana."
+
+];
+
+loveBtn.onclick=function(){
+
+let random=Math.floor(Math.random()*quotes.length);
+
+quote.innerHTML=quotes[random];
+
+}
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+},350);
+
 </script>
 
 </body>
